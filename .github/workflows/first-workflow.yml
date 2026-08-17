@@ -1,22 +1,12 @@
-name: first workflow
+name: cron workflow
 
 on:
-  push:
-    branches:
-      - "main"
+ schedule:
+   - cron: "0/5 * * * *"
 
-jobs:
-  first-workflow-job:
-    name: first job
+jobs: 
+  cron workflow: 
     runs-on: ubuntu-latest
     steps:
-      - name: Before checkout action
-        run: ls
-        shell: bash
-
-      - name: checkout steps
-        uses: actions/checkout@v3
-
-      - name: after checkout action
-        run: ls
-        shell: bash
+      - run: echo "cron workflow"
+      
