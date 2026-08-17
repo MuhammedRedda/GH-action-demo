@@ -1,8 +1,10 @@
 name: first workflow
+
 on:
   push:
     branches:
-      - "main" 
+      - "main"
+
 jobs:
   first-workflow-job:
     name: first job
@@ -10,4 +12,4 @@ jobs:
     steps:
       - name: run bash command
         run: echo "first workflow"
-        shell: bash 
+        shell: bash
